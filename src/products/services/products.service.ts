@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 
 import { Product } from './../entities/product.entity';
-import { CreateProductDto, UpdateProductDto } from './../dtos/products.dtos';
+import { CreateProductDto, UpdateProductDto } from '../dtos/products.dto';
 @Injectable()
 export class ProductsService {
   private counterId = 1;
@@ -11,8 +11,8 @@ export class ProductsService {
       name: 'Product 1',
       description: 'bla bla bla',
       price: 122,
-      image: '',
       stock: 12,
+      image: '',
     },
   ];
 

@@ -8,9 +8,11 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { CreateCategoryDto, UpdateCategoryDto } from 'src/dtos/categories.dtos';
-import { CategoriesService } from 'src/services/categories.service';
+import { CreateCategoryDto, UpdateCategoryDto } from '../dtos/categories.dto';
+import { CategoriesService } from '../services/categories.service';
+import { ApiTags, ApiOperation } from '@nestjs/swagger';
 
+@ApiTags('categories')
 @Controller('categories')
 export class CategoriesController {
   constructor(private categoryService: CategoriesService) { }
@@ -42,6 +44,9 @@ export class CategoriesController {
     return this.categoryService.delete(id);
   }
 
+  @ApiOperation({
+    summary: 'Retrieved a one product of one category',
+  })
   @Get(':id/products/:productId')
   getProductByCategory(
     @Param('id') id: string,
