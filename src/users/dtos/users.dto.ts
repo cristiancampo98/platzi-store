@@ -21,4 +21,4 @@ export class CreateUserDto {
   readonly createdAt: string;
 }
 
-export class UpdateUserDto extends PartialType(CreateUserDto) { }
+export class UpdateUserDto extends PartialType(CreateUserDto) {}

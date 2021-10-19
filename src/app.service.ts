@@ -5,7 +5,7 @@ import config from './config';
 export class AppService {
   constructor(
     @Inject(config.KEY) private configService: ConfigType<typeof config>,
-  ) { }
+  ) {}
   getHello(): string {
     return `Hello World! ${this.configService.database.port}`;
   }

@@ -13,7 +13,7 @@ import { CustomersService } from '../services/customers.service';
 
 @Controller('customer')
 export class CustomerController {
-  constructor(private customerService: CustomersService) { }
+  constructor(private customerService: CustomersService) {}
   @Get(':id')
   getCustomer(@Param('id', ParseIntPipe) id: number) {
     return this.customerService.findOne(id);

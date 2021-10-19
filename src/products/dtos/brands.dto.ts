@@ -13,4 +13,4 @@ export class CreateBrandDto {
   readonly createdAt: string;
 }
 
-export class UpdateBrandDto extends PartialType(CreateBrandDto) { }
+export class UpdateBrandDto extends PartialType(CreateBrandDto) {}

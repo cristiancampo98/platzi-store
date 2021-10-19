@@ -13,7 +13,7 @@ import { UsersService } from '../services/users.service';
 
 @Controller('user')
 export class UserController {
-  constructor(private userService: UsersService) { }
+  constructor(private userService: UsersService) {}
   @Get(':id')
   getUser(@Param('id', ParseIntPipe) id: number) {
     return this.userService.findOne(id);

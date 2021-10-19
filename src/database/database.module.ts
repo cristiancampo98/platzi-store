@@ -13,4 +13,4 @@ const API_KEY_PROD = 'PROD123456';
   ],
   exports: ['API_KEY'],
 })
-export class DatabaseModule { }
+export class DatabaseModule {}

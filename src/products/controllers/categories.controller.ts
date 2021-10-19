@@ -15,7 +15,7 @@ import { ApiTags, ApiOperation } from '@nestjs/swagger';
 @ApiTags('categories')
 @Controller('categories')
 export class CategoriesController {
-  constructor(private categoryService: CategoriesService) { }
+  constructor(private categoryService: CategoriesService) {}
   @Get(':id')
   getCategory(@Param('id', ParseIntPipe) id: number) {
     return this.categoryService.findOne(id);

@@ -19,7 +19,7 @@ import { ApiTags } from '@nestjs/swagger';
 @ApiTags('products')
 @Controller('products')
 export class ProductsController {
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService) {}
   @Get()
   getProducts(
     @Query('limit') limit = 100,

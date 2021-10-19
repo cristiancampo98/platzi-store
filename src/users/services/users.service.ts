@@ -10,7 +10,7 @@ export class UsersService {
   constructor(
     private productsService: ProductsService,
     private configService: ConfigService,
-  ) { }
+  ) {}
   private counter = 1;
   private users: User[] = [
     {

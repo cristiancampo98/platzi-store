@@ -13,7 +13,7 @@ import { BrandsService } from '../services/brands.service';
 
 @Controller('brand')
 export class BrandController {
-  constructor(private brandService: BrandsService) { }
+  constructor(private brandService: BrandsService) {}
 
   @Get(':id')
   getBrand(@Param('id', ParseIntPipe) id: number) {

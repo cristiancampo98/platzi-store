@@ -11,4 +11,4 @@ export class CreateCategoryDto {
   readonly createdAt: string;
 }
 
-export class UpdateCategoryDto extends PartialType(CreateCategoryDto) { }
+export class UpdateCategoryDto extends PartialType(CreateCategoryDto) {}
